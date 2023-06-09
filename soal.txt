@@ -1,0 +1,75 @@
+1. weighted strings
+Alfabet dari a sampai z memiliki bobot sebesar angka urutannya, misal: a = 1, b = 2, c = 3, ..., z = 26. Bobot sebuah string merupakan penjumlahan bobot dari kesuluruhan karakter. 
+Contoh: gits = 7 + 9 + 20 + 19 = 55
+
+Sampel:
+Input:
+Diberikan sebuah string 'abbcccd' dengan queries [1, 3, 9, 8]. Queries digunakan untuk menentukan status dari angka di dalam queries dengan aturan:
+1. Apabila angka di queries bernilai sama dengan bobot karakter/substring maka return Yes.
+2. Apabila angka di queries bernilai beda dengan bobot karakter/substring maka return No.
+Pembobotan substring dan karakter:
+a = 1
+b = 2
+bb = 4
+c = 3
+cc = 6
+ccc = 9
+d = 4 
+Output: ['Yes', 'Yes', 'Yes', 'No']
+Penjelasan: Dari pembobotan substring dan karakter yang dimiliki 'abbcccd' maka status dari queries yang ditentukan yaitu ['Yes', 'Yes', 'Yes', 'No'].
+
+Aturan:
+1. Jika terdapat karakter yang berulang dan berurutan perlu dirincikan ke dalam bentuk substring dari perulangan pertama hingga n. Contoh: bbccc => b, bb, c, cc, ccc. 
+
+Soal: 
+Buat fungsi untuk menyelesaikan permasalahan Weighted Strings!
+
+
+2. Highest Palindrom
+
+Kamu memiliki string yang merepresentasikan angka '3943' lalu diberikan sebuah variabel k untuk melakukan replacement karakter sejumlah k pada string agar menjadi bentuk palindrom. 
+
+Sampel 1:
+Input:
+string: '3373' 
+k: 1 
+palindrom:
+1. '3373'  => '3773'
+Output: '3773'
+Penjelasan: Dari bentuk palindrom yang diperoleh maka highest palindrome-nya adalah '3773'
+Aturan:
+1. Jika dari sebuah string tidak ditemukan bentuk palindrome-nya meski sudah melakukan replacement dan tidak merepresentasikan sebuah angka maka akan mengeluarkan output -1.
+2. Tidak boleh menggunakan fungsi bawaan/tools untuk pencarian/filter/sort.
+3. Tidak boleh menggunakan looping.
+4. Hanya diperkenankan menggunakan rekursif.
+
+Soal:
+Buat fungsi yang digunakan untuk menyelesaikan permasalahan Highest Palindrome!
+
+3. balanced bracket
+
+Sampel 1:
+Input: { [ ( ) ] }
+Output: YES
+Penjelasan: Setiap braket seimbang, antara braket buka dan braket tutup.
+opening : { }
+opening : [ ]
+opening : ( }
+
+Sampel 2:
+Input: { [ ( ] ) }
+Output: NO
+Penjelasan: String { [ ( ] ) } tidak seimbang untuk karakter yang diapit oleh { dan } yaitu [ ( ] ).
+
+Sampel 3:
+Input: { ( ( [ ] ) [ ] ) [ ] }
+Output: YES
+Penjelasan: Setiap braket seimbang, antara braket buka dan braket tutup, meskipun struktur braket tidak beraturan.
+
+Aturan:
+1. Tanda braket yang diperbolehkan sebagai berikut: ( , ) , { , } , atau [ , ]. 
+2. Periksa tanda kurung yang memiliki kecocokan antara braket buka dan braket tutup dengan mengembalikan nilai string YES atau NO.
+
+Soal:
+1. Buat fungsi untuk menemukan Balanced Bracket dengan kompleksitas paling rendah!
+2. Jelaskan kompleksitas dari penyelesaianmu untuk No.3 dan cantumkan di README Repo! 
